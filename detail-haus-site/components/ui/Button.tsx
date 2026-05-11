@@ -15,7 +15,7 @@ export function Button({ href, variant, children, className = '', arrow = false 
     secondary: `${base} bg-transparent text-ink border border-ink hover:bg-ink hover:text-white`,
   }
   return (
-    <Link href={href} className={`${styles[variant]} ${className}`}>
+    <Link href={href} className={`group ${styles[variant]} ${className}`}>
       {children}
       {arrow && <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>}
     </Link>
