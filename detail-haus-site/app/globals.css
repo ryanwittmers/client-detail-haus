@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light only;
+  --accent:       #8B1E1E;
+  --accent-hover: #6F1818;
+  --accent-soft:  rgba(139, 30, 30, 0.08);
+  --accent-light: #E89090;
+}
+
+/* Swap to amber when client selects accent */
+/* [data-accent="amber"] { --accent: #B8731F; ... } */
+
+@theme {
+  /* Color palette */
+  --color-white:    #fdfdfd;
+  --color-bone:     #f2f0ed;
+  --color-fog:      #e5e3df;
+  --color-stone:    #a8a5a0;
+  --color-graphite: #6b6865;
+  --color-charcoal: #2d2b29;
+  --color-ink:      #1a1917;
+  --color-black:    #0c0c0b;
+
+  /* Typography */
+  --font-display: var(--font-syne), sans-serif;
+  --font-body:    var(--font-manrope), sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
+body { font-family: var(--font-manrope), sans-serif; -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: #fdfdfd; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-thumb { background: #a8a5a0; }
