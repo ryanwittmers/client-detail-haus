@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { Syne, Manrope } from 'next/font/google'
 import './globals.css'
 
@@ -12,7 +13,7 @@ const manrope = Manrope({
   variable: '--font-manrope',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Detail Haus | Premium Mobile Auto Detailing',
   description: 'Premium mobile auto detailing serving Medford, Jacksonville, and Central Point.',
 }
