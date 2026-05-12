@@ -1,6 +1,5 @@
 // components/layout/Nav.tsx
 import Link from 'next/link'
-import { SITE_CONFIG } from '@/data/config'
 
 export function Nav() {
   return (
