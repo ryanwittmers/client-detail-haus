@@ -48,7 +48,7 @@ export function Hero() {
             <p className="text-lg leading-relaxed text-stone font-light max-w-[480px]">{slide.sub}</p>
             <div className="flex gap-4 flex-wrap">
               <Button href="#contact" variant="primary" arrow>Book Now</Button>
-              <Button href="#services" variant="secondary">View Services</Button>
+              <Button href="#services" variant="secondary" light>View Services</Button>
             </div>
             {SLIDES.length > 1 && (
               <div className="flex gap-2 mt-2">
