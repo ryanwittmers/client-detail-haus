@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Syne, Manrope } from 'next/font/google'
 import './globals.css'
+import { Nav } from '@/components/layout/Nav'
+import { Footer } from '@/components/layout/Footer'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -21,7 +23,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${syne.variable} ${manrope.variable}`}>
-      <body>{children}</body>
+      <body className="bg-ink text-white">
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }
