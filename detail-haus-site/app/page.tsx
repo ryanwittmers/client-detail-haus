@@ -1,8 +1,10 @@
 // app/page.tsx
+import { Hero } from '@/components/sections/Hero'
+
 export default function Home() {
   return (
     <main>
-      {/* Sections imported here in Task 3+ */}
+      <Hero />
     </main>
   )
 }
