@@ -6,7 +6,8 @@ import { AddOns }   from '@/components/sections/AddOns'
 import { Process }  from '@/components/sections/Process'
 import { About }    from '@/components/sections/About'
 import { Reviews }   from '@/components/sections/Reviews'
-import { Products }  from '@/components/sections/Products'
+import { Products }     from '@/components/sections/Products'
+import { ServiceArea }  from '@/components/sections/ServiceArea'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Reviews />
       <Products />
+      <ServiceArea />
     </main>
   )
 }
