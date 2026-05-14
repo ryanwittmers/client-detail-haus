@@ -109,7 +109,7 @@ export function Contact() {
                   <UploadDropzone
                     endpoint="vehiclePhotos"
                     onClientUploadComplete={(res) => {
-                      setUploadedUrls(res.map(f => f.url))
+                      setUploadedUrls(res.map(f => f.ufsUrl))
                       setUploadError(null)
                     }}
                     onUploadError={(err) => {

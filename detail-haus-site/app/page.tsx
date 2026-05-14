@@ -13,7 +13,7 @@ import { Contact }      from '@/components/sections/Contact'
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Hero />
       <Services />
       <Pricing />
@@ -25,6 +25,6 @@ export default function Home() {
       <ServiceArea />
       <Instagram />
       <Contact />
-    </main>
+    </>
   )
 }
