@@ -9,6 +9,7 @@ import { Reviews }   from '@/components/sections/Reviews'
 import { Products }     from '@/components/sections/Products'
 import { ServiceArea }  from '@/components/sections/ServiceArea'
 import { Instagram }    from '@/components/sections/Instagram'
+import { Contact }      from '@/components/sections/Contact'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Products />
       <ServiceArea />
       <Instagram />
+      <Contact />
     </main>
   )
 }
