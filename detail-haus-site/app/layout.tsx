@@ -3,6 +3,9 @@ import { Syne, Manrope } from 'next/font/google'
 import './globals.css'
 import { Nav } from '@/components/layout/Nav'
 import { Footer } from '@/components/layout/Footer'
+import { NextSSRPlugin } from '@uploadthing/react/next-ssr-plugin'
+import { extractRouterConfig } from 'uploadthing/server'
+import { ourFileRouter } from '@/app/api/uploadthing/core'
 
 const syne = Syne({
   subsets: ['latin'],
@@ -24,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${syne.variable} ${manrope.variable}`}>
       <body className="bg-ink text-white">
+        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
         <Nav />
         <main>{children}</main>
         <Footer />
