@@ -5,7 +5,8 @@ import { Pricing }  from '@/components/sections/Pricing'
 import { AddOns }   from '@/components/sections/AddOns'
 import { Process }  from '@/components/sections/Process'
 import { About }    from '@/components/sections/About'
-import { Reviews }  from '@/components/sections/Reviews'
+import { Reviews }   from '@/components/sections/Reviews'
+import { Products }  from '@/components/sections/Products'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Process />
       <About />
       <Reviews />
+      <Products />
     </main>
   )
 }
