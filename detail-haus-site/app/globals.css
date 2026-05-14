@@ -2,19 +2,10 @@
 
 :root {
   color-scheme: light only;
-
-  /* OPTION A: Burgundy / Dark Red (current default) */
-  --accent:       #8B1E1E;
-  --accent-hover: #6F1818;
-  --accent-soft:  rgba(139, 30, 30, 0.08);
-  --accent-light: #E89090;
-
-  /* OPTION B: Amber / Gold — swap these in and comment out Option A to preview
-  --accent:       #B8731F;
-  --accent-hover: #95591A;
-  --accent-soft:  rgba(184, 115, 31, 0.10);
-  --accent-light: #E8B273;
-  */
+  --accent:       #fdfdfd;
+  --accent-hover: #a8a5a0;
+  --accent-soft:  rgba(253, 253, 253, 0.06);
+  --accent-light: #a8a5a0;
 }
 
 @theme {
@@ -33,9 +24,11 @@
   --font-body:    var(--font-manrope), sans-serif;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; overflow-x: hidden; }
-body { font-family: var(--font-manrope), sans-serif; -webkit-font-smoothing: antialiased; }
-::selection { background: var(--accent); color: #fdfdfd; }
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-thumb { background: #a8a5a0; }
+@layer base {
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body { font-family: var(--font-manrope), sans-serif; -webkit-font-smoothing: antialiased; }
+  ::selection { background: #a8a5a0; color: #1a1917; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-thumb { background: #a8a5a0; }
+}

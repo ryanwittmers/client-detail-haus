@@ -42,7 +42,7 @@ export function Contact() {
                 <div key={m.label}>
                   <div className="text-[0.7rem] tracking-[0.2em] uppercase font-semibold mb-1.5">{m.label}</div>
                   {m.href
-                    ? <a href={m.href} className="text-white text-lg hover:text-[var(--accent-light)] transition-colors">{m.value}</a>
+                    ? <a href={m.href} className="text-white text-lg hover:text-stone transition-colors">{m.value}</a>
                     : <span className="text-white text-lg">{m.value}</span>
                   }
                 </div>
@@ -60,25 +60,25 @@ export function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2">
                     <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Name</span>
-                    <input type="text" required placeholder="Your full name" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors placeholder:text-graphite" />
+                    <input type="text" required placeholder="Your full name" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors placeholder:text-graphite" />
                   </label>
                   <label className="flex flex-col gap-2">
                     <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Phone</span>
-                    <input type="tel" required placeholder="(541) 555-0123" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors placeholder:text-graphite" />
+                    <input type="tel" required placeholder="(541) 555-0123" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors placeholder:text-graphite" />
                   </label>
                 </div>
                 <label className="flex flex-col gap-2">
                   <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Email</span>
-                  <input type="email" required placeholder="you@example.com" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors placeholder:text-graphite" />
+                  <input type="email" required placeholder="you@example.com" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors placeholder:text-graphite" />
                 </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <label className="flex flex-col gap-2">
                     <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Vehicle</span>
-                    <input type="text" required placeholder="2021 Toyota Tacoma" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors placeholder:text-graphite" />
+                    <input type="text" required placeholder="2021 Toyota Tacoma" className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors placeholder:text-graphite" />
                   </label>
                   <label className="flex flex-col gap-2">
                     <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Package</span>
-                    <select className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors">
+                    <select className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors">
                       <option value="">Not sure yet — recommend one</option>
                       {PACKAGES.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
                       <option value="addon">Add-ons only</option>
@@ -90,7 +90,7 @@ export function Contact() {
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {ADDONS.map(addon => (
                       <label key={addon.name} className="flex items-center gap-2.5 cursor-pointer group">
-                        <input type="checkbox" className="accent-[var(--accent)] w-4 h-4" />
+                        <input type="checkbox" className="accent-white w-4 h-4" />
                         <span className="text-sm text-stone group-hover:text-white transition-colors">{addon.name}</span>
                       </label>
                     ))}
@@ -98,7 +98,7 @@ export function Contact() {
                 </div>
                 <label className="flex flex-col gap-2">
                   <span className="text-[0.7rem] tracking-[0.15em] uppercase text-stone font-semibold">Anything we should know?</span>
-                  <textarea rows={4} placeholder="Vehicle condition, specific concerns, preferred dates, location, or anything else relevant." className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-[var(--accent)] outline-none transition-colors placeholder:text-graphite resize-none" />
+                  <textarea rows={4} placeholder="Vehicle condition, specific concerns, preferred dates, location, or anything else relevant." className="bg-charcoal border border-charcoal text-white px-4 py-3 text-sm focus:border-white outline-none transition-colors placeholder:text-graphite resize-none" />
                 </label>
 
                 {/* ── Vehicle Photos via UploadThing ── */}
@@ -116,11 +116,11 @@ export function Contact() {
                       setUploadError(`Upload failed: ${err.message}`)
                     }}
                     appearance={{
-                      container: 'border border-charcoal bg-charcoal hover:border-[var(--accent)] transition-colors rounded-none p-8',
+                      container: 'border border-charcoal bg-charcoal hover:border-stone transition-colors rounded-none p-8',
                       uploadIcon: 'text-stone',
                       label: 'text-stone text-sm',
                       allowedContent: 'text-graphite text-xs',
-                      button: 'bg-white text-ink text-xs tracking-[0.1em] uppercase font-semibold rounded-full px-5 py-2.5 hover:bg-[var(--accent)] hover:text-white transition-colors ut-uploading:bg-[var(--accent)]',
+                      button: 'bg-white text-ink text-xs tracking-[0.1em] uppercase font-semibold rounded-full px-5 py-2.5 hover:bg-stone hover:text-white transition-colors',
                     }}
                   />
                   {uploadError && (
@@ -138,7 +138,7 @@ export function Contact() {
                   )}
                 </div>
 
-                <button type="submit" className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-semibold bg-white text-ink hover:bg-[var(--accent)] hover:text-white transition-all duration-200 w-fit">
+                <button type="submit" className="inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-semibold bg-white text-ink hover:bg-stone hover:text-white transition-all duration-200 w-fit">
                   Send Request →
                 </button>
               </form>

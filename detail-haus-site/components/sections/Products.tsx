@@ -27,7 +27,7 @@ export function Products() {
                   <span className="font-display font-bold text-xl text-white text-center">{brand.name}</span>
                 )}
                 {brand.note && (
-                  <span className="text-[0.65rem] tracking-[0.2em] uppercase text-[var(--accent-light)] font-semibold">{brand.note}</span>
+                  <span className="text-[0.65rem] tracking-[0.2em] uppercase text-stone font-semibold">{brand.note}</span>
                 )}
               </div>
             ))}

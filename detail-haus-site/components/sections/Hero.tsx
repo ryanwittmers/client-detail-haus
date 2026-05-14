@@ -1,7 +1,6 @@
 // components/sections/Hero.tsx
 'use client'
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 
 interface HeroSlide {
@@ -15,7 +14,7 @@ interface HeroSlide {
 const SLIDES: HeroSlide[] = [
   {
     tag:   'Southern Oregon · Mobile Detailing',
-    title: <>Studio-grade<br />detailing,<br /><em className="font-medium not-italic text-[var(--accent-light)]">at your door.</em></>,
+    title: <>Studio-grade<br />detailing,<br /><em className="not-italic font-medium text-stone">at your door.</em></>,
     sub:   'Premium mobile auto detailing serving Medford, Jacksonville, and Central Point. Book online, send a few photos, and we bring everything needed to your driveway.',
     image: '/images/hero-1.jpg',
     label: 'Detail Haus · Southern Oregon',
@@ -39,7 +38,7 @@ export function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-end">
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3 text-[0.7rem] tracking-[0.18em] uppercase text-stone font-semibold">
-              <span className="w-6 h-px bg-[var(--accent)]" />
+              <span className="w-6 h-px bg-stone" />
               {slide.tag}
             </div>
             <h1 className="font-display font-extrabold text-[clamp(3rem,7vw,6rem)] leading-[1.4] tracking-[-0.02em] text-white">
@@ -56,22 +55,14 @@ export function Hero() {
                   <button
                     key={i}
                     onClick={() => setActive(i)}
-                    className={`h-px transition-all duration-300 ${i === active ? 'w-8 bg-[var(--accent)]' : 'w-4 bg-charcoal'}`}
+                    className={`h-px transition-all duration-300 ${i === active ? 'w-8 bg-stone' : 'w-4 bg-charcoal'}`}
                   />
                 ))}
               </div>
             )}
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden bg-charcoal">
-            {/* Replace with <video> when client provides clip */}
-            <Image
-              src={slide.image}
-              alt={slide.label}
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute bottom-4 left-4 bg-ink/90 px-3.5 py-2 text-[0.65rem] tracking-[0.15em] uppercase font-semibold text-white">
+          <div className="relative aspect-[4/5] overflow-hidden bg-charcoal border border-charcoal/50">
+            <div className="absolute bottom-4 left-4 bg-black/60 px-3.5 py-2 text-[0.65rem] tracking-[0.15em] uppercase font-semibold text-stone">
               {slide.label}
             </div>
           </div>

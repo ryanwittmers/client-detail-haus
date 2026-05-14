@@ -26,10 +26,10 @@ export function AddOns() {
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {ADDONS.map(addon => (
-              <div key={addon.name} className="p-7 border border-charcoal bg-ink hover:border-[var(--accent)] transition-colors">
+              <div key={addon.name} className="p-7 border border-charcoal bg-ink hover:border-stone transition-colors">
                 <div className="flex justify-between items-baseline mb-3.5 gap-4">
                   <h4 className="font-display font-bold text-[1.05rem] tracking-[-0.005em] text-white">{addon.name}</h4>
-                  <span className="font-display font-semibold text-[0.95rem] text-[var(--accent-light)] whitespace-nowrap">
+                  <span className="font-display font-semibold text-[0.95rem] text-stone whitespace-nowrap">
                     {formatAddonPrice(addon)}
                   </span>
                 </div>

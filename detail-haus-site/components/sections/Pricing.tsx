@@ -35,7 +35,7 @@ export function Pricing() {
                 className={`flex flex-col gap-7 p-12 ${pkg.featured ? 'bg-charcoal' : 'bg-ink'}`}
               >
                 <div>
-                  <div className={`font-display font-medium text-[0.7rem] tracking-[0.18em] uppercase mb-3 ${pkg.featured ? 'text-[var(--accent-light)]' : 'text-stone'}`}>
+                  <div className={`font-display font-medium text-[0.7rem] tracking-[0.18em] uppercase mb-3 ${pkg.featured ? 'text-stone' : 'text-stone'}`}>
                     {pkg.index} / {pkg.name}
                     {pkg.featured && <span className="text-stone font-normal"> · Most Popular</span>}
                   </div>
@@ -53,7 +53,7 @@ export function Pricing() {
                 <ul className="flex flex-col gap-3">
                   {pkg.features.map(f => (
                     <li key={f} className={`text-[0.9rem] leading-snug font-light flex gap-3 items-start ${pkg.featured ? 'text-white' : 'text-stone'}`}>
-                      <span className={`mt-[0.2em] shrink-0 font-bold ${pkg.featured ? 'text-[var(--accent-light)]' : 'text-[var(--accent)]'}`}>+</span>
+                      <span className={`mt-[0.2em] shrink-0 font-bold ${pkg.featured ? 'text-stone' : 'text-white'}`}>+</span>
                       {f}
                     </li>
                   ))}

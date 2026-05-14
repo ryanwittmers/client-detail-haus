@@ -14,7 +14,7 @@ export function Nav() {
           <Link href="#pricing"  className="hidden md:block text-stone text-[0.78rem] tracking-[0.1em] uppercase font-medium hover:text-white transition-colors">Pricing</Link>
           <Link href="#about"    className="hidden md:block text-stone text-[0.78rem] tracking-[0.1em] uppercase font-medium hover:text-white transition-colors">About</Link>
           <Link href="#reviews"  className="hidden md:block text-stone text-[0.78rem] tracking-[0.1em] uppercase font-medium hover:text-white transition-colors">Reviews</Link>
-          <Link href="#contact"  className="text-[0.72rem] tracking-[0.12em] uppercase font-semibold px-5 py-2.5 rounded-full bg-white text-ink hover:bg-[var(--accent)] hover:text-white transition-colors">
+          <Link href="#contact"  className="text-[0.72rem] tracking-[0.12em] uppercase font-semibold px-5 py-2.5 rounded-full bg-white text-ink hover:bg-stone hover:text-white transition-colors">
             Book Now
           </Link>
         </nav>

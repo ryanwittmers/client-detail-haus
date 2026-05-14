@@ -30,7 +30,7 @@ export function Process() {
                   ${i > 0 ? 'md:pl-7 md:border-l md:border-l-charcoal' : ''}
                   ${i < STEPS.length - 1 ? 'md:pr-7' : ''}`}
               >
-                <div className="font-display font-extrabold text-[3rem] leading-none text-[var(--accent)] mb-5">{step.num}</div>
+                <div className="font-display font-extrabold text-[3rem] leading-none text-white mb-5">{step.num}</div>
                 <h4 className="font-display font-bold text-[1.2rem] text-white mb-2.5">{step.title}</h4>
                 <p className="text-[0.88rem] leading-relaxed text-stone font-light">{step.body}</p>
               </div>

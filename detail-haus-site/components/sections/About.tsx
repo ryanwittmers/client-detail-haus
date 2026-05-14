@@ -27,7 +27,7 @@ export function About() {
           <div className="mt-14 grid grid-cols-1 md:grid-cols-[5fr_7fr] gap-20 items-start">
             <div className="font-display font-medium text-[2rem] leading-[1.3] tracking-[-0.01em] text-white">
               Same hands on every vehicle,{' '}
-              <em className="not-italic font-semibold text-[var(--accent-light)]">start to finish.</em>
+              <em className="not-italic font-semibold text-stone">start to finish.</em>
             </div>
             <div className="flex flex-col gap-6 text-stone text-base leading-[1.7] font-light">
               <p>Detail Haus is a one-person mobile detailing business based in Southern Oregon. Reece runs every job personally, which means the same eyes that quote your vehicle are the ones doing the work.</p>
@@ -44,7 +44,7 @@ export function About() {
                 className={`pt-8 ${i > 0 ? 'pl-6' : ''} ${i < STATS.length - 1 ? 'pr-6 border-r border-charcoal' : ''}`}
               >
                 <div className="font-display font-extrabold text-[2.6rem] leading-none tracking-[-0.02em] text-white">{stat.num}</div>
-                <span className="text-[0.7rem] tracking-[0.18em] uppercase text-[var(--accent-light)] font-semibold mt-2.5 block">{stat.label}</span>
+                <span className="text-[0.7rem] tracking-[0.18em] uppercase text-stone font-semibold mt-2.5 block">{stat.label}</span>
               </div>
             ))}
           </div>

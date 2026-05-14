@@ -12,9 +12,9 @@ interface ButtonProps {
 export function Button({ href, variant, children, className = '', arrow = false, light = false }: ButtonProps) {
   const base = 'group inline-flex items-center gap-2.5 px-7 py-4 rounded-full text-[0.78rem] tracking-[0.12em] uppercase font-semibold transition-all duration-200 no-underline'
   const styles = {
-    primary:   `${base} bg-ink text-white hover:bg-[var(--accent)]`,
+    primary: `${base} bg-white text-ink hover:bg-stone hover:text-white`,
     secondary: light
-      ? `${base} bg-transparent text-white border border-white hover:bg-white hover:text-ink`
+      ? `${base} bg-transparent text-white border border-white/40 hover:bg-white hover:text-ink`
       : `${base} bg-transparent text-ink border border-ink hover:bg-ink hover:text-white`,
   }
   return (

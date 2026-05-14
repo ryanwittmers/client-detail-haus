@@ -29,7 +29,7 @@ export function Services() {
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-[1.4rem] mb-3 text-white tracking-[-0.005em]">
-                    <span className="inline-block w-1.5 h-1.5 bg-[var(--accent)] mr-2 align-middle" />
+                    <span className="inline-block w-1.5 h-1.5 bg-stone mr-2 align-middle" />
                     {service.name}
                   </h3>
                   <p className="text-[0.92rem] leading-relaxed text-stone font-light">{service.description}</p>

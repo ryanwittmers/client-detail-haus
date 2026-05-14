@@ -22,7 +22,7 @@ export function Reviews() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {REVIEWS.map(review => (
               <div key={review.name} className="bg-charcoal p-9 flex flex-col gap-5 hover:bg-[#2d2b29] transition-colors">
-                <div className="text-[var(--accent-light)] text-[0.85rem] tracking-[0.25em]">★★★★★</div>
+                <div className="text-stone text-[0.85rem] tracking-[0.25em]">★★★★★</div>
                 <p className="text-[0.95rem] leading-[1.65] text-white font-light flex-1">{review.quote}</p>
                 <div className="flex flex-col gap-1 pt-4 border-t border-black/30 mt-auto">
                   <div className="font-display font-semibold text-[0.95rem] text-white">{review.name}</div>
