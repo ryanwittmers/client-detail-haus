@@ -1,5 +1,6 @@
 // components/layout/Footer.tsx
 import Link from 'next/link'
+import Image from 'next/image'
 import { SITE_CONFIG } from '@/data/config'
 import { PRIMARY_SERVICE_AREAS } from '@/data/serviceAreas'
 
@@ -9,9 +10,8 @@ export function Footer() {
       <div className="max-w-[1320px] mx-auto px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="flex items-center gap-px no-underline w-fit">
-              <span className="font-display font-bold text-[0.85rem] tracking-[0.18em] px-3.5 py-1.5 leading-none bg-white text-ink border border-white">DETAIL</span>
-              <span className="font-display font-bold text-[0.85rem] tracking-[0.18em] px-3.5 py-1.5 leading-none bg-transparent text-white border border-white">HAUS</span>
+            <Link href="/" className="no-underline w-fit">
+              <Image src="/images/logo.webp" alt="Detail Haus" width={32} height={32} className="h-8 w-auto opacity-80" />
             </Link>
             <p className="text-stone text-sm leading-relaxed font-light max-w-[280px]">
               Mobile auto detailing serving {PRIMARY_SERVICE_AREAS.join(', ')} and the surrounding area. Owner-operated.
