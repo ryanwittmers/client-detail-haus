@@ -22,7 +22,7 @@ export function Instagram() {
           />
         </Reveal>
         {WIDGET_ID ? (
-          <div className={WIDGET_ID} />
+          <div data-elfsight-app-id={WIDGET_ID} className="elfsight-app" />
         ) : (
           <Reveal>
             <div className="border border-charcoal p-16 flex flex-col items-center gap-6 text-center bg-ink">
