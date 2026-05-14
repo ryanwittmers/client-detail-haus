@@ -37,6 +37,12 @@ export const ADDONS: AddOn[] = [
     description: 'Up to 6 months of hydrophobic protection. Adds gloss, sheds water, and makes future washes faster.',
   },
   {
+    name:        'Professional Ceramic Coating',
+    priceFrom:   800,
+    priceTo:     1200,
+    description: 'Multi-year paint protection with a permanent-bond ceramic layer. Dramatically easier maintenance, deep gloss, and resistance to UV, chemicals, and light scratches. Included in The Works — available as a standalone add-on to any package.',
+  },
+  {
     name:        'Leather Reconditioning',
     priceFrom:   50,
     priceTo:     null,
