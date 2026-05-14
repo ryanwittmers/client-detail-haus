@@ -11,7 +11,7 @@ const STEPS = [
 
 export function Process() {
   return (
-    <section className="pb-24 border-b border-charcoal bg-charcoal">
+    <section className="pb-24 border-b border-ink bg-charcoal">
       <div className="max-w-[1320px] mx-auto px-10">
         <Reveal>
           <SectionHead
