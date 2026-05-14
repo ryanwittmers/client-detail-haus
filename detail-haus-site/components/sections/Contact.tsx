@@ -14,8 +14,6 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    // uploadedUrls available here for Phase 5 form backend
-    console.log('Uploaded photo URLs:', uploadedUrls)
     // TODO Phase 5: POST { ...formFields, photoUrls: uploadedUrls } to form backend
     setSubmitted(true)
   }
@@ -131,7 +129,10 @@ export function Contact() {
                   {uploadedUrls.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {uploadedUrls.map(url => (
-                        <img key={url} src={url} alt="Uploaded vehicle" className="w-16 h-16 object-cover border border-charcoal" />
+                        <div key={url}>
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src={url} alt="Uploaded vehicle photo" className="w-16 h-16 object-cover border border-charcoal" />
+                        </div>
                       ))}
                     </div>
                   )}
