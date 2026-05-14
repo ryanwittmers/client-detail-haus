@@ -2,14 +2,20 @@
 
 :root {
   color-scheme: light only;
+
+  /* OPTION A: Burgundy / Dark Red (current default) */
   --accent:       #8B1E1E;
   --accent-hover: #6F1818;
   --accent-soft:  rgba(139, 30, 30, 0.08);
   --accent-light: #E89090;
-}
 
-/* Swap to amber when client selects accent */
-/* [data-accent="amber"] { --accent: #B8731F; ... } */
+  /* OPTION B: Amber / Gold — swap these in and comment out Option A to preview
+  --accent:       #B8731F;
+  --accent-hover: #95591A;
+  --accent-soft:  rgba(184, 115, 31, 0.10);
+  --accent-light: #E8B273;
+  */
+}
 
 @theme {
   /* Color palette */
