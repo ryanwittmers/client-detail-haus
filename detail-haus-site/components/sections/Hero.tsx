@@ -33,7 +33,7 @@ export function Hero() {
               <span className="w-6 h-px bg-stone" />
               {slide.tag}
             </div>
-            <h1 className="font-display font-light text-[clamp(1.75rem,3.5vw,3rem)] leading-[1.15] tracking-[-0.01em] text-white max-w-[480px]">
+            <h1 className="font-display font-bold text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[1.25] tracking-[-0.02em] text-white max-w-[560px]">
               {slide.title}
             </h1>
             <p className="text-[0.95rem] leading-[1.7] text-stone font-light max-w-[420px]">{slide.sub}</p>

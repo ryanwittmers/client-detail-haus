@@ -4,6 +4,7 @@ import { Reveal } from '@/components/ui/Reveal'
 import { Button } from '@/components/ui/Button'
 import { PACKAGES } from '@/data/packages'
 import type { Package } from '@/data/packages'
+import { SITE_CONFIG } from '@/data/config'
 
 function formatPrice(pkg: Package) {
   if (pkg.priceTo) return `$${pkg.priceFrom}–$${pkg.priceTo}`
@@ -71,6 +72,12 @@ export function Pricing() {
                 </div>
               </div>
             ))}
+          </div>
+        </Reveal>
+        <Reveal>
+          <div className="mt-8 pt-8 border-t border-charcoal flex items-baseline gap-3">
+            <span className="text-[0.7rem] tracking-[0.18em] uppercase text-stone font-semibold">Maintenance Plan</span>
+            <span className="text-stone text-sm font-light">Starting at ${SITE_CONFIG.maintenancePriceFrom}/mo — regular upkeep packages available. Ask for details.</span>
           </div>
         </Reveal>
       </div>

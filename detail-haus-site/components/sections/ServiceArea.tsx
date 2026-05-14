@@ -41,8 +41,8 @@ export function ServiceArea() {
                   title="Detail Haus Service Area Map"
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-stone text-sm">
-                  Map coming soon
+                <div className="w-full h-full flex items-center justify-center">
+                  <p className="text-stone text-[0.72rem] tracking-[0.15em] uppercase font-semibold">Map embed coming</p>
                 </div>
               )}
             </div>
