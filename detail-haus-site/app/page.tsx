@@ -8,6 +8,7 @@ import { About }    from '@/components/sections/About'
 import { Reviews }   from '@/components/sections/Reviews'
 import { Products }     from '@/components/sections/Products'
 import { ServiceArea }  from '@/components/sections/ServiceArea'
+import { Instagram }    from '@/components/sections/Instagram'
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Reviews />
       <Products />
       <ServiceArea />
+      <Instagram />
     </main>
   )
 }
