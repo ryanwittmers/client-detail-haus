@@ -1,11 +1,12 @@
 // components/sections/ServiceArea.tsx
 import { SectionHead } from '@/components/ui/SectionHead'
 import { Reveal } from '@/components/ui/Reveal'
-import { PRIMARY_SERVICE_AREAS, MAP_EMBED_URL } from '@/data/serviceAreas'
+import { Button } from '@/components/ui/Button'
+import { PRIMARY_SERVICE_AREAS } from '@/data/serviceAreas'
 
 export function ServiceArea() {
   return (
-    <section className="pb-24 border-b border-charcoal bg-ink">
+    <section id="service-area" className="pb-24 border-b border-charcoal bg-ink">
       <div className="max-w-[1320px] mx-auto px-10">
         <Reveal>
           <SectionHead
@@ -16,36 +17,36 @@ export function ServiceArea() {
             light
           />
         </Reveal>
+
         <Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-            <div className="flex flex-col gap-6">
-              <p className="text-[0.7rem] tracking-[0.2em] uppercase text-stone font-semibold">Primary Service Cities</p>
-              <ul className="flex flex-col divide-y divide-charcoal">
-                {PRIMARY_SERVICE_AREAS.map(area => (
-                  <li key={area} className="py-4 font-display font-semibold text-xl text-white">{area}</li>
-                ))}
-              </ul>
-              <p className="text-stone text-sm font-light leading-relaxed">
-                Serving the broader Southern Oregon region. Contact us to confirm availability for your location.
-              </p>
-            </div>
-            <div className="aspect-[4/3] bg-charcoal border border-charcoal overflow-hidden">
-              {MAP_EMBED_URL ? (
-                <iframe
-                  src={MAP_EMBED_URL}
-                  width="100%"
-                  height="100%"
-                  loading="lazy"
-                  className="border-0"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Detail Haus Service Area Map"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center">
-                  <p className="text-stone text-[0.72rem] tracking-[0.15em] uppercase font-semibold">Map embed coming</p>
+          <div className="border-t border-charcoal">
+            {PRIMARY_SERVICE_AREAS.map((area, i) => (
+              <div
+                key={area}
+                className="group flex items-center justify-between border-b border-charcoal py-6 md:py-8 transition-colors duration-300 hover:bg-charcoal/30 -mx-10 px-10"
+              >
+                <div className="flex items-center gap-8 md:gap-14">
+                  <span className="font-body text-[0.68rem] tracking-[0.2em] uppercase text-graphite font-semibold w-5 shrink-0">
+                    0{i + 1}
+                  </span>
+                  <span className="font-display font-bold text-[clamp(2.8rem,6vw,5.5rem)] leading-none tracking-[-0.02em] text-white">
+                    {area}
+                  </span>
                 </div>
-              )}
-            </div>
+                <span className="hidden md:block text-[0.68rem] tracking-[0.2em] uppercase text-graphite font-semibold group-hover:text-stone transition-colors duration-300">
+                  Southern Oregon
+                </span>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal>
+          <div className="mt-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+            <p className="text-stone text-sm font-light leading-relaxed max-w-[420px]">
+              Outside these cities? Contact us — we serve the broader Southern Oregon region and can confirm availability for your location.
+            </p>
+            <Button href="#contact" variant="secondary" light>Check Availability</Button>
           </div>
         </Reveal>
       </div>

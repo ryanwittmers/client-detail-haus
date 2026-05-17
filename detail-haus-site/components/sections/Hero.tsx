@@ -1,12 +1,20 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
 import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 
-const SLIDES = [
+interface Slide {
+  tag:   string
+  title: ReactNode
+  sub:   string
+  image: string
+  label: string
+}
+
+const SLIDES: Slide[] = [
   {
     tag:   'Southern Oregon · Mobile Detailing',
-    title: 'Studio-grade detailing, at your door.',
+    title: <>Studio-grade detailing,<br />at your door.</>,
     sub:   'Premium mobile auto detailing serving Medford, Jacksonville, and Central Point. Book online, send a few photos, and we bring everything needed to your driveway.',
     image: '/images/hero.webp',
     label: 'Detail Haus · Southern Oregon',
@@ -33,7 +41,7 @@ export function Hero() {
               <span className="w-6 h-px bg-stone" />
               {slide.tag}
             </div>
-            <h1 className="font-display font-bold text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[1.25] tracking-[-0.02em] text-white max-w-[560px]">
+            <h1 className="font-display font-bold text-[clamp(2.5rem,5.5vw,4.5rem)] leading-[1.3] tracking-[-0.02em] text-white max-w-[560px]">
               {slide.title}
             </h1>
             <p className="text-[0.95rem] leading-[1.7] text-stone font-light max-w-[420px]">{slide.sub}</p>

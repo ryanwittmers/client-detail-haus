@@ -20,7 +20,7 @@
   --color-black:    #0c0c0b;
 
   /* Typography */
-  --font-display: var(--font-syne), sans-serif;
+  --font-display: 'DM Sans', sans-serif;
   --font-body:    var(--font-manrope), sans-serif;
 }
 

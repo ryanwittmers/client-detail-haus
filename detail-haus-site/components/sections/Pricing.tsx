@@ -7,11 +7,13 @@ import type { Package } from '@/data/packages'
 import { SITE_CONFIG } from '@/data/config'
 
 function formatPrice(pkg: Package) {
+  if (pkg.priceFrom === null) return 'Contact us'
   if (pkg.priceTo) return `$${pkg.priceFrom}–$${pkg.priceTo}`
   return `$${pkg.priceFrom}`
 }
 
 function formatPriceLabel(pkg: Package) {
+  if (pkg.priceFrom === null) return 'Price on request'
   return pkg.priceTo ? 'Price range' : 'Starting at'
 }
 

@@ -22,7 +22,9 @@ export function Products() {
             {BRANDS.map(brand => (
               <div key={brand.name} className="bg-charcoal flex flex-col items-center justify-center py-12 px-8 gap-4">
                 {brand.logo ? (
-                  <Image src={brand.logo} alt={brand.name} width={120} height={40} className="object-contain brightness-0 invert opacity-80" />
+                  <div className="relative w-32 h-10">
+                    <Image src={brand.logo} alt={brand.name} fill className="object-contain grayscale invert opacity-80" />
+                  </div>
                 ) : (
                   <span className="font-display font-bold text-xl text-white text-center">{brand.name}</span>
                 )}

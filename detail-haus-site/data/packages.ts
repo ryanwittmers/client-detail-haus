@@ -2,8 +2,8 @@ export interface Package {
   id:          string
   index:       string
   name:        string
-  priceFrom:   number
-  priceTo:     number | null   // null = "Starting at" with no upper bound confirmed yet
+  priceFrom:   number | null   // null = price on request
+  priceTo:     number | null
   featured:    boolean
   duration:    string
   features:    string[]
@@ -15,8 +15,8 @@ export const PACKAGES: Package[] = [
     id:        'refresh',
     index:     '01',
     name:      'The Refresh',
-    priceFrom: 149,
-    priceTo:   null,
+    priceFrom: 100,
+    priceTo:   250,
     featured:  false,
     duration:  '2–3 hour service window',
     features: [
@@ -31,8 +31,8 @@ export const PACKAGES: Package[] = [
     id:        'full-detail',
     index:     '02',
     name:      'The Full Detail',
-    priceFrom: 299,
-    priceTo:   null,
+    priceFrom: 400,
+    priceTo:   600,
     featured:  true,
     duration:  '4–6 hour service window',
     features: [
@@ -48,15 +48,15 @@ export const PACKAGES: Package[] = [
     id:        'the-works',
     index:     '03',
     name:      'The Works',
-    priceFrom: 599,
-    priceTo:   null,
+    priceFrom: 800,
+    priceTo:   1200,
     featured:  false,
     duration:  'Full-day service',
     features: [
       'Everything in The Full Detail',
       'Single-stage paint correction',
       'Headlight restoration included',
-      'Premium ceramic spray sealant',
+      'Professional ceramic coating',
       'Trim restoration',
     ],
     cta: 'Book Works',

@@ -1,6 +1,7 @@
 // components/sections/Services.tsx
 import { SectionHead } from '@/components/ui/SectionHead'
 import { Reveal } from '@/components/ui/Reveal'
+import Image from 'next/image'
 import { SERVICES } from '@/data/services'
 
 export function Services() {
@@ -21,18 +22,28 @@ export function Services() {
             {SERVICES.map((service, i) => (
               <div
                 key={service.index}
-                className={`py-10 grid grid-cols-[60px_1fr] gap-8 border-b border-charcoal
-                  ${i % 2 === 0 ? 'md:pr-10 md:border-r md:border-r-charcoal' : 'md:pl-10'}`}
+                className={`relative overflow-hidden min-h-[400px] group border-b border-charcoal
+                  ${i % 2 === 0 ? 'md:border-r md:border-r-charcoal' : ''}`}
               >
-                <div className="font-display font-semibold text-[0.85rem] text-stone tracking-[0.12em]">
-                  {service.index}
-                </div>
-                <div>
-                  <h3 className="font-display font-bold text-[1.4rem] mb-3 text-white tracking-[-0.005em]">
-                    <span className="inline-block w-1.5 h-1.5 bg-stone mr-2 align-middle" />
-                    {service.name}
-                  </h3>
-                  <p className="text-[0.92rem] leading-relaxed text-stone font-light">{service.description}</p>
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  fill
+                  className={`object-cover transition-transform duration-700 ease-out group-hover:scale-105 ${service.imagePosition ?? 'object-center'}`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/20" />
+                <div className="relative z-10 flex flex-col justify-between h-full min-h-[400px] p-10">
+                  <span className="font-display font-semibold text-[0.85rem] text-stone tracking-[0.12em]">
+                    {service.index}
+                  </span>
+                  <div>
+                    <h3 className="font-display font-bold text-[1.4rem] mb-3 text-white tracking-[-0.005em]">
+                      {service.name}
+                    </h3>
+                    <p className="text-[0.92rem] leading-relaxed text-stone font-light max-w-[340px]">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

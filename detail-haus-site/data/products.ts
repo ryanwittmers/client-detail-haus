@@ -5,8 +5,8 @@ export interface Brand {
 }
 
 export const BRANDS: Brand[] = [
-  { name: 'Cerakote', logo: null, note: 'Certified Installer' },
-  { name: 'P&S Detail Products', logo: null },
-  { name: 'Koch Chemie', logo: null },
-  { name: 'CarPro', logo: null },
+  { name: 'Cerakote', logo: '/images/Coatresa-Cerakote-logo.png', note: 'Certified Installer' },
+  { name: 'P&S Detail Products', logo: '/images/p-and-s.png' },
+  { name: 'Koch Chemie', logo: '/images/kochchemie.svg' },
+  { name: 'CarPro', logo: '/images/carpro.png' },
 ]

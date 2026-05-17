@@ -16,7 +16,7 @@ export function SectionHead({ index, label, title, description, light }: Section
         <div className={`font-body text-[0.7rem] tracking-[0.2em] uppercase font-semibold ${light ? 'text-stone' : 'text-graphite'}`}>
           {label}
         </div>
-        <h2 className={`font-display font-bold text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.2] tracking-[-0.02em] ${light ? 'text-white' : 'text-ink'}`}>
+        <h2 className={`font-display font-bold text-[clamp(2rem,4.5vw,3.5rem)] leading-[1.3] tracking-[-0.02em] ${light ? 'text-white' : 'text-ink'}`}>
           {title}
         </h2>
         {description && (

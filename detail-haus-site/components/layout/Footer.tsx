@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
           <div className="flex flex-col gap-4">
             <Link href="/" className="no-underline w-fit">
-              <Image src="/images/logo.webp" alt="Detail Haus" width={32} height={32} className="h-8 w-auto opacity-80" />
+              <Image src="/images/logo.jpg" alt="Detail Haus" width={32} height={32} className="h-8 w-auto opacity-80" />
             </Link>
             <p className="text-stone text-sm leading-relaxed font-light max-w-[280px]">
               Mobile auto detailing serving {PRIMARY_SERVICE_AREAS.join(', ')} and the surrounding area. Owner-operated.
