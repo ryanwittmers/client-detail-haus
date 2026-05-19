@@ -65,6 +65,25 @@ export function About() {
             ))}
           </div>
         </Reveal>
+
+        <Reveal>
+          <div className="py-10 border-t border-charcoal flex justify-center md:justify-start">
+            <div className="inline-flex items-center gap-5 border border-charcoal px-6 py-4">
+              <div className="relative w-24 h-7">
+                <Image
+                  src="/images/Coatresa-Cerakote-logo.png"
+                  alt="Cerakote"
+                  fill
+                  className="object-contain grayscale invert opacity-90"
+                />
+              </div>
+              <span className="h-7 w-px bg-charcoal" aria-hidden />
+              <span className="text-[0.72rem] tracking-[0.2em] uppercase text-white font-semibold">
+                ProTeam Installer
+              </span>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
