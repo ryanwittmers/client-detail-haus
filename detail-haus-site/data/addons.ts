@@ -21,7 +21,7 @@ export const ADDONS: AddOn[] = [
   {
     name:        'Hair Removal',
     priceFrom:   50,
-    priceTo:     80,
+    priceTo:     100,
     description: 'Specialized rubber tools and extended vacuuming to lift embedded pet or human hair from carpets, mats, and upholstery.',
   },
   {
