@@ -1,14 +1,28 @@
 // components/sections/Instagram.tsx
 'use client'
+import { useEffect, type FC, type HTMLAttributes } from 'react'
 import { SectionHead } from '@/components/ui/SectionHead'
 import { Reveal } from '@/components/ui/Reveal'
-import { Button } from '@/components/ui/Button'
-import { SITE_CONFIG } from '@/data/config'
 
-// When client provides Elfsight/Behold widget ID, set it here
-const WIDGET_ID: string | null = null
+// Behold feed for the Detail Haus Instagram — manage at behold.so
+const BEHOLD_FEED_ID = 'baiCq9sVl7mWDbAWvX8S'
+const BEHOLD_SCRIPT = 'https://w.behold.so/widget.js'
+
+// Behold's <behold-widget> is a custom element; type it so JSX/TS accept it.
+const BeholdWidget = 'behold-widget' as unknown as FC<
+  HTMLAttributes<HTMLElement> & { 'feed-id': string }
+>
 
 export function Instagram() {
+  useEffect(() => {
+    // Load Behold's widget script once (it upgrades all <behold-widget> elements).
+    if (document.querySelector(`script[src="${BEHOLD_SCRIPT}"]`)) return
+    const s = document.createElement('script')
+    s.type = 'module'
+    s.src = BEHOLD_SCRIPT
+    document.head.append(s)
+  }, [])
+
   return (
     <section className="pb-24 border-b border-charcoal bg-charcoal">
       <div className="max-w-[1320px] mx-auto px-10">
@@ -21,18 +35,9 @@ export function Instagram() {
             light
           />
         </Reveal>
-        {WIDGET_ID ? (
-          <div data-elfsight-app-id={WIDGET_ID} className="elfsight-app" />
-        ) : (
-          <Reveal>
-            <div className="border border-charcoal p-16 flex flex-col items-center gap-6 text-center bg-ink">
-              <p className="text-stone font-light text-lg">Photos and videos posted regularly.</p>
-              <Button href={SITE_CONFIG.instagramUrl} variant="secondary" light arrow>
-                Follow {SITE_CONFIG.instagram} on Instagram
-              </Button>
-            </div>
-          </Reveal>
-        )}
+        <Reveal>
+          <BeholdWidget feed-id={BEHOLD_FEED_ID} />
+        </Reveal>
       </div>
     </section>
   )
