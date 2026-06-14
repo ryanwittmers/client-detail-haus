@@ -15,7 +15,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: 'Detail Haus | Premium Mobile Auto Detailing',
-  description: 'Premium mobile auto detailing serving Medford, Jacksonville, and Central Point.',
+  description: 'Premium mobile auto detailing serving Medford, Jacksonville, Grants Pass, Ashland, and Eagle Point.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

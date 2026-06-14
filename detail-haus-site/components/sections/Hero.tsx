@@ -15,7 +15,7 @@ const SLIDES: Slide[] = [
   {
     tag:   'Southern Oregon · Mobile Detailing',
     title: <>Studio-grade detailing,<br />at your door.</>,
-    sub:   'Premium mobile auto detailing serving Medford, Jacksonville, and Central Point. Book online, send a few photos, and we bring everything needed to your driveway.',
+    sub:   'Premium mobile auto detailing serving Southern Oregon. Book online, send a few photos, and we bring everything needed to your driveway.',
     image: '/images/hero.webp',
     label: 'Detail Haus · Southern Oregon',
   },
